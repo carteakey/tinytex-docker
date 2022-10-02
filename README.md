@@ -19,7 +19,7 @@ docker run --rm -i -v "$PWD":/data latex pdflatex resume.tex
 If your .tex file fails to generate, with an error `\*.sty not found`, just locate what package contains that .sty and add it to the Dockerfile.
 
 ```sh
-tlmgr search --global --file cfr-lm.sty
+tlmgr search --global --file <your_missing_sty_name>.sty
 ```
 
 This way your tinytex installation will contain only the packages you may need.
