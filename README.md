@@ -14,15 +14,17 @@ docker build -t latex .
 docker run --rm -i -v "$PWD":/data latex pdflatex resume.tex
 ```
 
-#### Search for packages
+### Search for packages
 
-If your .tex file fails to generate, with an error '\*.sty not found', just locate what package contains that .sty and add it to the Dockerfile.
+If your .tex file fails to generate, with an error `\*.sty not found`, just locate what package contains that .sty and add it to the Dockerfile.
 
 ```sh
 tlmgr search --global --file cfr-lm.sty
 ```
 
 This way your tinytex installation will contain only the packages you may need.
+
+### Using with VSCode
 
 It works great with the [VSCode Latex Extension](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop).
 
